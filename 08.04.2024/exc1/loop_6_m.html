@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   or:
+      let i = 1;
+      let z = Number.MIN_SAFE_INTEGER;
+      let x = Number.MAX_SAFE_INTEGER;
+
+      while (i <= 5) {
+        let num = prompt("plese enter number: ");
+
+        while (isNaN(num) || num === "" || num == 0) {
+          num = prompt("enter valid number");
+        }
+
+        // num = parseFloat(num);
+
+        if (num >= z) {
+          z = num;
+          console.log("max ", z);
+        }
+
+        if (num <= x) {
+          x = num;
+          console.log("min ", x);
+        }
+
+        i++;
+      }
+      alert("max is " + z + ", min is " + x);
+
+      //   or:
+      // let a = 1;
+      // let b = Number.NEGATIVE_INFINITY;
+      // let c = Number.POSITIVE_INFINITY;
+
+      // while (a <= 5) {
+      //   let num = prompt("plese enter number: ");
+
+      //   while (isNaN(num) || num === "") {
+      //     num = prompt("enter valid number");
+      //   }
+
+      //   num = parseFloat(num);
+
+      //   if (num >= b) {
+      //     b = num;
+      //     console.log("max ", b);
+      //   }
+
+      //   if (num <= c) {
+      //     c = num;
+      //     console.log("min ", a);
+      //   }
+
+      //   a++;
+      // }
+      // alert("max is " + b + ", min is " + c);
+    </script>
+  </body>
+</html>

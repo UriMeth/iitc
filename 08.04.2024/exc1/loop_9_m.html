@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let max = Number.MIN_SAFE_INTEGER;
+      let min = Number.MAX_SAFE_INTEGER;
+
+      while (true) {
+        let num = prompt("plese enter number: ");
+
+        while (isNaN(num) || num === "") {
+          num = prompt("enter valid number");
+        }
+
+        if (num >= max) {
+          max = num;
+          console.log("max ", max);
+        }
+
+        if (num <= min && num > 0) {
+          min = num;
+          console.log("min ", min);
+        }
+
+        if (num <= 0) {
+          alert("max is " + max + ", min is " + min);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
