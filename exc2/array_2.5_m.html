@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ary = [1, 2, 3, 4, 5];
+      let len = ary.length;
+      let num_1 = Number(prompt("enter number here: "));
+      function find_num(num) {
+        for (let i = 0; i < len; i++) {
+          if (num_1 == ary[i]) {
+            return true;
+          }
+        }
+        return false;
+      }
+      console.log(find_num());
+    </script>
+  </body>
+</html>
