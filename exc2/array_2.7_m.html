@@ -6,6 +6,21 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      let ary_1 = [1, 2, 3, 4, 5];
+      let ary_2 = [1, 2, 3, 6, 7];
+      let sum = 0;
+      function similar(ary_1, ary_2) {
+        for (let i of ary_1) {
+          for (let j of ary_2) {
+            if (i == j) {
+              sum++;
+            }
+          }
+        }
+        return sum;
+      }
+      console.log(similar(ary_1, ary_2));
+    </script>
   </body>
 </html>
