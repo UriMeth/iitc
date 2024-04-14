@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello To XO Game!</h1>
+    <script>
+      let board = [];
+
+      function boardSize() {
+        let size = Number(
+          prompt("Choose how many rows and columns you want in the game: ")
+        );
+
+        // Initialize the board with the chosen size
+        for (let i = 0; i < size; i++) {
+          board.push([]); // Push a new row
+          for (let j = 0; j < size; j++) {
+            board[i].push("-"); // Push columns initialized with empty space
+          }
+        }
+        return board; // Return the created board
+      }
+      // console.log(boardSize());
+
+      function isWinByRowIndex(rowIndex) {
+        for (let indexInRow = 0; indexInRow < board.length; indexInRow++) {
+          if (
+            board[rowIndex][0] != board[rowIndex][indexInRow] ||
+            board[rowIndex][0] == "-"
+          ) {
+            return false;
+          }
+        }
+        return true;
+      }
+      // console.log(isWinByRowIndex(0));
+
+      function isWinByColIndex(indexInRow) {
+        for (let rowIndex = 0; rowIndex < board.length; rowIndex++) {
+          if (
+            board[0][indexInRow] != board[rowIndex][indexInRow] ||
+            board[0][indexInRow] == "-"
+          ) {
+            return false;
+          }
+        }
+        return true;
+      }
+      // console.log(isWinByColIndex(0));
+
+      function isWinByDiagonal_1() {
+        for (
+          let rowIndex = 0, indexInRow = 0;
+          rowIndex < board.length;
+          rowIndex++, indexInRow++
+        ) {
+          if (
+            board[0][0] != board[rowIndex][indexInRow] ||
+            board[0][0] == "-"
+          ) {
+            return false;
+          }
+        }
+        return true;
+      }
+      // console.log(isWinByDiagonal_1());
+
+      function isWinByDiagonal_2() {
+        for (
+          let rowIndex = board.length - 1, colIndex = 0;
+          rowIndex >= 0 && colIndex < board.length;
+          rowIndex--, colIndex++
+        ) {
+          if (
+            board[rowIndex][colIndex] != board[board.length - 1][0] ||
+            board[board.length - 1][0] == "-"
+          ) {
+            return false;
+          }
+        }
+        return true;
+      }
+      // console.log(isWinByDiagonal_2());
+
+      function checkWin() {
+        for (let i = 0; i < board.length; i++) {
+          if (
+            isWinByRowIndex(i) ||
+            isWinByColIndex(i) ||
+            isWinByDiagonal_1() ||
+            isWinByDiagonal_2()
+          ) {
+            return true;
+          }
+        }
+        return false;
+      }
+      // console.log(checkWin());
+
+      function chooseUserName() {
+        let userChoosing = Number(
+          prompt("please choose: 1 - x, 2 - o. my choose: ")
+        );
+        if (userChoosing != 1 && userChoosing != 2) {
+          alert("please choose number: 1 or 2 ");
+          userChoosing = Number(
+            prompt("please choose: 1 - x, 2 - o. my choose: ")
+          );
+        }
+        if (userChoosing == 1) {
+          alert("you are x");
+          return "x";
+        } else if (userChoosing == 2) {
+          alert("you are o");
+          return "o";
+        }
+      }
+      // console.log(chooseUserName());
+
+      function gameSteps() {
+        boardSize();
+        let userType = chooseUserName();
+        for (
+          let stepNumber = 1;
+          stepNumber <= board.length * board.length;
+          stepNumber++
+        ) {
+          let rowNumber = Number(prompt("choose the row number: ")) - 1;
+          let colNumber = Number(prompt("choose the col number: ")) - 1;
+
+          if (rowNumber > board.length + 1 || colNumber > board.length + 1) {
+            alert(`please choose number under ${board.length}`);
+            return;
+          }
+          board[rowNumber][colNumber] = userType;
+          // console.log(board);
+          if (checkWin()) {
+            alert(`${userType} win!!`);
+            // console.log(board);
+            return;
+          } else if (stepNumber === board.length * board.length) {
+            alert("It's a tie!");
+            // console.log(board);
+          }
+          userType = userType === "x" ? "o" : "x"; // Toggle the current player
+        }
+        return board;
+      }
+      gameSteps();
+      console.log(board);
+    </script>
+  </body>
+</html>
