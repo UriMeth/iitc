@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const num = [6, 3, 9, 5, 9];
+      function lookForNum(array, number) {
+        let found = false;
+        for (const i in array) {
+          if (array[i] == number) {
+            array[i]++;
+            found = true;
+          }
+        }
+        if (found == true) {
+          console.log(array);
+        } else {
+          console.log("Number not found");
+        }
+      }
+      lookForNum(num, 3);
+      lookForNum(num, 9);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+:root {
+    --white-color:white;
+    --border-radius: 4px;
+    --green_background-color: #04AA6D;
+}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    /* margin: 0; */
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+    */
+    * {
+        margin: 0;
+    }
+    /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+    */
+    body {
+        -webkit-font-smoothing: antialiased;
+        margin: 10px;
+        font: 100% Lucida Sans, Verdana;
+        font-size: 15px;
+        line-height: 26px;
+    }
+    /*
+    5. Improve media defaults
+    */
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+    /*
+    6. Remove built-in form typography styles
+    */
+    input, button, textarea, select {
+        font: inherit;
+    }
+    /*
+    7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+    /*
+    8. Create a root stacking context
+    */
+    #root, #__next {
+        isolation: isolate;
+    }
+    
+    a{
+        color: inherit;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+    
+    a.style_1{
+        text-decoration: none;
+    }
+    
+
+    
+    .upside.page{
+        background-color:var(--green_background-color);
+        color: var(--white-color);
+        padding-inline: 12px;
+        padding-block: 16px;
+        border-radius: var(--border-radius);
+        line-height:12px;
+    }
+    
+    .leftside.page ul li{
+        width: 150px;
+        margin-block: 2px;
+        text-align: left;
+        border-radius: var(--border-radius);
+        border: 1px solid #d4d4d4;
+        cursor: pointer;
+        background-color: #F1F1F1;
+        
+    }
+
+    .leftside.page ul li .link{
+        background-color:var(--green_background-color);
+    }
+    
+    .leftside.page ul li:hover {
+        background-color: white;
+    }
+    
+    .leftside.page ul li:first-child {
+        color: var(--white-color);
+        background-color:var(--green_background-color);
+      }
+       
+    .side_bar{
+        background-color: #32A4E7;
+        color: var(--white-color);
+        border-radius: var(--border-radius);
+    }
+
+    .senter_of.page{
+        padding: 12px;
+    }
+
+    .side_bar.page{
+        padding-top: 20px;
+        padding-inline: 12px;
+    }
+    
+    
+    .flex-items{
+        display: grid;
+        grid-auto-flow: column;
+        margin-block: 8px;
+    }
+    
+    .senter_of.page{
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    
+    .down.page{
+        background-color: #F1F1F1;
+        border-radius: var(--border-radius);
+        font-size: small;
+        text-align: center;
+    }
+
+    h1, h2 {
+        margin-block: 10px;
+    }
+    
+    h3{
+        margin-block: 12px;
+    }
+
+    @media (min-width: 600px) {
+        .product {
+          --content-padding: 2rem;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
