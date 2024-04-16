@@ -3,26 +3,30 @@ let operator;
 let numOutput1;
 let numOutput2;
 
+function clearBoard(){
+    elemoutput.innerText = 0;
+}
+
 function chooseNum(digit){
     if (elemoutput.innerText === "0") {
         elemoutput.innerText = digit;
       } else {
         elemoutput.innerText += digit;
     }
-    console.log(elemoutput.innerText);
+    // console.log(elemoutput.innerText);
 }
 
 function setOperator(oper) {
     operator = oper;
     numOutput1 = elemoutput.innerText;
     elemoutput.innerText = '';
-    console.log(operator);
+    // console.log(operator);
 }
 
 function calculate(){
-    num1 = Number(numOutput1);
+    const num1 = Number(numOutput1);
     numOutput2 = elemoutput.innerText;
-    num2 = Number(numOutput2);
+    const num2 = Number(numOutput2);
     
     let result = '';
     if (operator==='+'){
@@ -41,9 +45,4 @@ function calculate(){
         const division = num1 / num2;
         elemoutput.innerText = division;
     }
-    
-}
-
-function clearBoard(){
-    elemoutput.innerText = 0;
 }
