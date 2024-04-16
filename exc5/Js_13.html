@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="resultScreen">
+        <button class="btn clear" onclick="clearBoard()">ce</button>
+        <p id="output">0</p>
+      </div>
+      <div class="all_buttons">
+        <div class="numbers">
+          <button class="btn num" onclick="chooseNum(9)">9</button>
+          <button class="btn num" onclick="chooseNum(8)">8</button>
+          <button class="btn num" onclick="chooseNum(7)">7</button>
+          <button class="btn num" onclick="chooseNum(6)">6</button>
+          <button class="btn num" onclick="chooseNum(5)">5</button>
+          <button class="btn num" onclick="chooseNum(4)">4</button>
+          <button class="btn num" onclick="chooseNum(3)">3</button>
+          <button class="btn num" onclick="chooseNum(2)">2</button>
+          <button class="btn num" onclick="chooseNum(1)">1</button>
+          <button class="btn num" onclick="chooseNum(0)">0</button>
+          <button class="btn num" onclick="chooseNum('.')">.</button>
+          <button class="btn operation calculate" onclick="calculate()">
+            =
+          </button>
+        </div>
+        <div class="opertionsButtons">
+          <button class="btn operation" onclick="setOperator('/')">/</button>
+          <button class="btn operation" onclick="setOperator('*')">*</button>
+          <button class="btn operation" onclick="setOperator('-')">-</button>
+          <button class="btn operation" onclick="setOperator('+')">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

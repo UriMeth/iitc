@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .main{
+    width: 240px;
+    height: 300px;
+    background-color: #A8A8A8;
+  }
+
+  .resultScreen{
+      display: grid;
+      grid-auto-flow: column;
+      padding: 8px;
+      margin: 8px;
+      background-color: #EEEEEE;
+      border-radius: 8px;
+    }
+    
+    p{
+        background-color: #E2F9FB;
+        grid-column-start: 2;
+        grid-column-end: 200;
+        text-align: right;
+        padding-right: 8px;
+        font-size: larger;
+        padding-top: 6px;
+    }
+    
+    .all_buttons{
+        display: grid;
+        grid-auto-flow: column;
+        font-size: larger;
+    }
+    
+    .numbers{
+    border-radius: 8px;
+    margin-inline: 8px;
+    background-color: #EEEEEE;
+    grid-template-columns: 12px 12px 12px;
+    grid-template-rows: 12px 12px 12px;
+    grid-gap: 6px;
+}
+
+.btn{
+    width: 40px; /* Adjust the width and height to your preference */
+    height: 40px;
+    border-radius: 50%;
+    background-color:#CBD6FE; /* Change the background color as needed */
+    font-weight:bolder;
+    margin: 4px;
+    border-color: #A8A8A8;
+}
+
+.btn:hover{
+    background-color: #FEE38D;
+}
+
+.btn.num{
+    cursor: pointer;
+}
+
+.btn.operation.calculate{
+    cursor: pointer;
+}
+
+
+.btn.operation.calculate:hover{
+    background-color: #FEE38D;
+}
+
+.opertionsButtons{
+    border-radius: 8px;
+    margin-right: 8px;
+    background-color: #EEEEEE;
+    width: 50px;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+
+.btn.operation{
+    background-color: #02CA00;
+    border-color:black;
+}
+
+.btn.clear{
+    cursor: pointer;
+    border: none;
+    background-color: #FF5252;
+    border-radius: 0%;
+    margin: 0%;
+}
+
+.btn.clear:hover{
+    background-color: #FEE38D;
+}
