@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Bulls and Cows</h1>
+      <p>enter your name here:</p>
+      <input id="userName" />
+      <br />
+      <br />
+      <button onclick="startGame();pcCreateArrayWuthRandNumbers()">
+        Start Game
+      </button>
+      <br />
+      <br />
+      <input type="number" id="userGuess" />
+      <button
+        class="btn guess"
+        onclick="is2NumberSimilar();isGameFinish();computeNumBulls();computeNumCows();showHistory();"
+      >
+        Guess
+      </button>
+      <button class="btn newGame" onclick="ShowPcGuess()">
+        Show PC's Guess
+      </button>
+      <p id="resultMessage"></p>
+      <p id="Bulls"></p>
+      <p id="Cows"></p>
+      <p id="PcGuess"></p>
+      <p id="time"></p>
+      <div id="showHistory"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

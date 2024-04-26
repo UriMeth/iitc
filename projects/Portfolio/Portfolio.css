@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Work Sans", sans-serif;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ---------------------------------------------- */
+
+  body{
+    background-color: #7A4FD1;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+  }
+
+  nav {
+    display: flex;
+    background-color: #200e3d;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    overflow: hidden;
+    padding: 13px;
+    text-align:center
+}
+
+li {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    }
+
+li:hover {
+    color:#52C5FF;
+}
+
+.main{
+    margin-top: 130px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h1, h2, h3{
+    font-family: "Days One", sans-serif;
+}
+
+.first.img{
+    max-width: 440px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+h2{
+    font-weight: 900;
+}
+
+.about.me{
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+    padding: 40px 50px 70px;
+    margin: 0 auto;
+    /* margin-inline: 44px; */
+    background-color: white;
+    box-shadow: 10px 10px 0px rgb(0 0 0 / 40%), -10px -10px 0px rgb(255 114 114 / 80%);
+}
+
+.aboutMe.items {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+
+.aboutMeImg {
+    height: 450px;
+    width: 400px;
+    margin: 0;
+}
+
+.aboutMeText{
+    height: auto;
+    width: 40%;
+    margin-left: 40px;
+    text-align: left;
+}
+
+p {
+    margin-block: 1em;
+    margin-inline: 0px;
+}
+
+.projects{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.earth-project{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    background-image: url(img/earth.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bbcnews-project{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    background-image: url(img/bbcnews.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.head-project{
+    color: white;
+}
+
+.text {
+    position: absolute;
+    height: 65px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+.text:hover {
+    height: 175px;
+    transition: 0.3s;
+}
+
+.button {
+    border: 5px solid lightblue;
+    border-radius: 10px;
+    width: 160px;
+    margin-bottom: 100px;
+    margin-left: 10px;
+}
+
+.contact{
+    background-color: #3C376E;
+    color: white;
+}
+
+.contact-form {
+    max-width: 800px;
+    display: flex;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: white;
+}
+
+.contact-details {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.contact-details input {
+    width: 100%;
+    border-radius: 5px;
+    border: 0px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.message textarea {
+    border-radius: 5px;
+    border: 0px;
+}
+
+.message button {
+    color: #1d3d5f;
+    border: 0;
+    border-radius: 5px;
+    background: lightblue;
+    width: 140px;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Portfolio.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="navBar">
+        <nav>
+          <ul>
+            <li><a href="#aboutme">ABOUT ME</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contactme">CONTACT ME</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <img src="img/rob.jpeg" class="first img" />
+        <br />
+        <h2>Hi! I'm Rob! I teach people how to code and make websites.</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <section class="about me" id="aboutme">
+          <br />
+          <h2>About me</h2>
+          <br />
+          <div class="aboutMe items">
+            <img src="img/rob-aboutme.jpeg" class="aboutMeImg" />
+            <p class="aboutMeText">
+              Almost a decade ago I was busy teaching math to teenagers at three
+              schools in London and Cambridge. Since I’m a bit of a coding geek,
+              I also built websites on the side for friends and family. I soon
+              learned that web development was a very lucrative career choice,
+              so I gave up my successful (and sometimes stressful) job as a
+              teacher to build websites. Today, I couldn’t be happier with that
+              decision.
+              <br />
+              <br />
+              After building websites for about seven years, I noticed a lot of
+              people struggling to learn how to code. I wanted others to have
+              the same freedoms that I enjoyed, so I started teaching web
+              development
+              <br />
+              <br />
+              I'm familiar with HTML5, CSS3, JavaScript, PHP7 and MySQL.
+              Checkout some of the projects I've done below.
+            </p>
+          </div>
+        </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 class="head-project">Projects</h2>
+        <section class="projects" id="projects">
+          <div class="earth-project">
+            <div class="text">
+              <h3 class="project-name">Earth Facts</h3>
+              <div class="contect">
+                <p>A HTML project about some facts about the earth.</p>
+              </div>
+              <a href="" class="button">View Project</a>
+            </div>
+          </div>
+          <div class="bbcnews-project">
+            <div class="text">
+              <h3 class="project-name">BBC News Clone</h3>
+              <div class="contect">
+                <p>
+                  This project is a clone of the BBC news website from the Web
+                  Dev 2.0 Course.
+                </p>
+              </div>
+              <a href="" class="button">View Project</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <br />
+      <br />
+      <br />
+      <section class="contact" id="contactme">
+        <br />
+        <br />
+        <br />
+        <h2>Contact</h2>
+        <p>Use this form to get in touch. I would love to hear from you!</p>
+        <form class="contact-form">
+          <div class="contact-details">
+            <label for="name">Name</label>
+            <input type="text" id="yourname" placeholder="Yourname" />
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              placeholder="Reason for your message"
+            />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email address" />
+          </div>
+          <div class="message">
+            <label for="msg">Message</label>
+            <textarea id="msg" rows="15"></textarea>
+            <button type="submit">Submit</button>
+            <br />
+            <br />
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
